@@ -1,0 +1,89 @@
+/* HERO full-screen */
+.hero {
+  position: relative;
+  height: 100vh;                    /* ocupa toda altura da janela */
+  min-height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* camada escura para melhorar contraste do texto */
+.hero-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.45) 100%);
+  z-index: 1;
+}
+
+/* conteúdo que fica sobre a overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 980px;
+  margin: 0 1rem;
+  padding: 4rem 1rem;
+}
+
+/* logo dentro do hero (opcional) */
+.hero-logo {
+  display: block;
+  margin: 0 auto 1.25rem;
+  max-width: 240px;
+  width: 35%;
+  height: auto;
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.25));
+}
+
+/* título e subtítulo */
+.hero-title {
+  color: #ffffff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.28);
+  font-size: clamp(2rem, 4.2vw, 4rem);
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.hero-sub {
+  color: rgba(255,255,255,0.92);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
+  margin-bottom: 1.25rem;
+}
+
+/* botão principal no hero */
+.hero-cta {
+  padding: .85rem 1.25rem;
+  font-size: 1.05rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.18);
+}
+
+/* botão já tem as cores de components.css; garantir hover */
+.hero .btn-primary {
+  background: var(--green-dark);
+  color: #fff;
+  border: none;
+}
+.hero .btn-primary:hover {
+  background: var(--green-light);
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .hero { background-position: center 20%; min-height: 72vh; }
+  .hero-logo { max-width: 180px; width: 45%; margin-bottom: 0.9rem; }
+  .hero-content { padding: 3rem 1rem; }
+}
+
+@media (max-width: 380px) {
+  .hero-title { font-size: 1.6rem; }
+  .hero-sub { font-size: 0.95rem; }
+}

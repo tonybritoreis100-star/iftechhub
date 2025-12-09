@@ -1,0 +1,19 @@
+/* Layout e utilitários */
+.text-center { text-align: center; }
+
+/* Containers com espaçamento padrão */
+.py-5 { padding-top: 3rem; padding-bottom: 3rem; }
+.bg-white { background: var(--white); }
+.bg-light { background: #f7f7f7; }
+
+/* Grid minimal — mantemos Bootstrap como base, aqui ficam ajustes só se precisar */
+.row.g-4 { gap: 1.5rem; }
+
+/* Pequenos utilitários de espaçamento */
+.mt-3 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+/* Responsividade extra */
+@media (max-width: 768px) {
+  .container { padding: 0 1rem; }
+}
