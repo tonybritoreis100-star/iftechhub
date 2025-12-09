@@ -1,0 +1,63 @@
+/*Seção de diferenciais*/
+
+.container_diferenciais {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.cards_diferenciais {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.card_diff {
+  background: var(--white);
+  padding: 1.4rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.10);
+  transition: 0.2s;
+  text-align: center;
+}
+
+.card_diff:hover {
+  transform: translateY(-6px);
+}
+
+.titulo_diff {
+  color: var(--green-dark);
+}
+
+.img_diferenciais {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.img_diferenciais img {
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .container_diferenciais {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .cards_diferenciais {
+    grid-template-columns: 1fr;
+  }
+
+  .img_diferenciais img {
+    width: 70%;
+  }
+}
