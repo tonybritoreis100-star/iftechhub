@@ -1,21 +1,19 @@
-/* Reforça o estilo do footer para garantir consistência */
+/*footer */
 footer {
   background: linear-gradient(90deg, var(--green-dark, #2D523A), var(--green-light, #5AA44E)) !important;
   color: var(--white, #FCFCFC) !important;
   text-align: center;
   padding: 1rem 0 !important;
   position: relative;
-  z-index: 10; /* evita que algo cubra o footer */
+  z-index: 10;
   box-shadow: 0 -6px 18px rgba(0,0,0,0.06);
 }
 
-/* Texto dentro do footer */
 footer strong {
   font-weight: 700;
   display: inline-block;
 }
 
-/* Links no footer (se houver) */
 footer a {
   color: rgba(255,255,255,0.92);
   text-decoration: none;

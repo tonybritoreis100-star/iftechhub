@@ -1,7 +1,7 @@
-/* HERO full-screen */
+/* HERO */
 .hero {
   position: relative;
-  height: 100vh;                    /* ocupa toda altura da janela */
+  height: 100vh;              
   min-height: 520px;
   display: flex;
   align-items: center;
@@ -14,7 +14,6 @@
   overflow: hidden;
 }
 
-/* camada escura para melhorar contraste do texto */
 .hero-overlay {
   content: "";
   position: absolute;
@@ -23,7 +22,7 @@
   z-index: 1;
 }
 
-/* conteúdo que fica sobre a overlay */
+
 .hero-content {
   position: relative;
   z-index: 2;
@@ -33,7 +32,6 @@
   padding: 4rem 1rem;
 }
 
-/* logo dentro do hero (opcional) */
 .hero-logo {
   display: block;
   margin: 0 auto 1.25rem;
@@ -43,7 +41,6 @@
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.25));
 }
 
-/* título e subtítulo */
 .hero-title {
   color: #ffffff;
   text-shadow: 0 6px 18px rgba(0,0,0,0.28);
@@ -58,7 +55,6 @@
   margin-bottom: 1.25rem;
 }
 
-/* botão principal no hero */
 .hero-cta {
   padding: .85rem 1.25rem;
   font-size: 1.05rem;
@@ -66,7 +62,6 @@
   box-shadow: 0 10px 22px rgba(0,0,0,0.18);
 }
 
-/* botão já tem as cores de components.css; garantir hover */
 .hero .btn-primary {
   background: var(--green-dark);
   color: #fff;
@@ -76,7 +71,6 @@
   background: var(--green-light);
 }
 
-/* Mobile tweaks */
 @media (max-width: 768px) {
   .hero { background-position: center 20%; min-height: 72vh; }
   .hero-logo { max-width: 180px; width: 45%; margin-bottom: 0.9rem; }

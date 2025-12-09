@@ -1,11 +1,9 @@
-/* wrapper que esconde overflow visual */
 .team-track-wrapper {
   overflow: hidden;
   position: relative;
   margin-top: 1rem;
 }
 
-/* track rolável (flex row) */
 .team-track {
   display: flex;
   gap: 1rem;
@@ -14,29 +12,25 @@
   -webkit-overflow-scrolling: touch;
   padding-bottom: 0.5rem;
 
-  /* permite rolar horizontalmente por arraste */
   overflow-x: auto;
 
-  /* remove scrollbar */
-  scrollbar-width: none; /* Firefox */
-}
-.team-track::-webkit-scrollbar { display: none; } /* Chrome, Edge, Safari */
 
-/* Default (mobile): 1 por "página" */
+  scrollbar-width: none; 
+}
+.team-track::-webkit-scrollbar { display: none; } 
+
 .member-card {
   flex: 0 0 100%;
   max-width: 100%;
   scroll-snap-align: start;
 }
 
-/* imagem do card */
 .member-card .card-img-top {
   width: 100%;
   height: 220px;
   object-fit: cover;
 }
 
-/* Setas (posição absoluta sobre o container) */
 .team-nav {
   position: absolute;
   top: 50%;
@@ -50,8 +44,7 @@
   justify-content: center;
   opacity: 0.95;
 
-  /* estilo verde */
-  background-color: #1dbf4d; /* Verde IFTechHub */
+  background-color: #1dbf4d;
   border: none;
   color: white;
   cursor: pointer;
@@ -59,7 +52,6 @@
   transition: background-color 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
 }
 
-/* Hover e foco */
 .team-nav:hover,
 .team-nav:focus {
   background-color: #17a542;
@@ -67,18 +59,15 @@
   outline: none;
 }
 
-/* ícone dentro do botão */
 .team-nav i {
   font-size: 1.1rem;
   line-height: 1;
   pointer-events: none;
 }
 
-/* posições das setas — ajuste se necessário */
 #team-prev { left: 0.25rem; }
 #team-next { right: 0.25rem; }
 
-/* >=576px (sm): 2 por "página" */
 @media (min-width: 576px) {
   .member-card {
     flex: 0 0 50%;
@@ -88,7 +77,6 @@
   #team-next { right: 0.25rem; }
 }
 
-/* >=992px (lg): 3 por "página" */
 @media (min-width: 992px) {
   .member-card {
     flex: 0 0 calc(33.3333%);
@@ -99,7 +87,6 @@
   #team-next { right: 0.5rem; }
 }
 
-/* estado desabilitado / visual reduzido */
 .team-nav[disabled],
 .team-nav.opacity-50 {
   opacity: 0.45;
@@ -107,12 +94,10 @@
   transform: translateY(-50%) scale(1);
 }
 
-/* acessibilidade: foco visível para teclado */
 .team-nav:focus-visible {
   box-shadow: 0 0 0 4px rgba(29,191,77,0.18);
 }
 
-/* opcional: suaviza pequenas diferenças no conteúdo do track */
 .team-track > .member-card {
-  min-width: 0; /* previne overflow por conteúdo largo dentro do card */
+  min-width: 0;
 }
